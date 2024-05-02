@@ -1,8 +1,4 @@
-<%-- 
-    Document   : index
-    Created on : 5 Jan, 2023, 7:54:46 PM
-    Author     : prath
---%>
+
 
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.DriverManager"%>
