@@ -1,1 +1,2 @@
 # Java-Project---Dignostic-s-Product-Trading-System
+Introducing our Dignostic's product trading system website, tailored for distributors and customers alike. Streamlining transactions and communication, our platform ensures seamless trading experiences. With user-friendly interfaces, users can effortlessly browse, order, and track products. Robust security measures safeguard sensitive data, fostering trust and confidence. Join us in revolutionizing product trading for distributors and customers globally.
