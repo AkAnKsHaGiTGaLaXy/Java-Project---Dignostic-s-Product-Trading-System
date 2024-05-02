@@ -1,8 +1,4 @@
-<%-- 
-    Document   : orders_received
-    Created on : 4 Feb, 2023, 7:35:50 PM
-    Author     : prath
---%>
+
 
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.DriverManager"%>
