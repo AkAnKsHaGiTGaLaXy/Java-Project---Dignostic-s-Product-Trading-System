@@ -16,10 +16,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 
-/**
- *
- * @author prath
- */
 
 @MultipartConfig(fileSizeThreshold=1024*1024*2, 
 maxFileSize=1024*1024*10, 
