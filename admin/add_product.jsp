@@ -1,8 +1,4 @@
-<%-- 
-    Document   : add_product
-    Created on : 6 Jan, 2023, 10:20:06 PM
-    Author     : prath
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
