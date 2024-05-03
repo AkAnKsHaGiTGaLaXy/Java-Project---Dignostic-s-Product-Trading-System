@@ -1,7 +1,4 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -18,10 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 
-/**
- *
- * @author prath
- */
+
 public class customer_history extends HttpServlet {
 
      Connection cn=null;
