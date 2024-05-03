@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cart_report" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="88c129ab-4d8b-4fe1-846d-7d93b09aa94e">
+	<property name="ireport.zoom" value="1.7715610000000035"/>
+	<property name="ireport.x" value="17"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     cart.`cart_id` AS cart_cart_id,
+     cart.`user_id` AS cart_user_id,
+     cart.`product_id` AS cart_product_id,
+     cart.`product_name` AS cart_product_name,
+     cart.`manufacturer` AS cart_manufacturer,
+     cart.`manufactured_date` AS cart_manufactured_date,
+     cart.`type` AS cart_type,
+     cart.`product_category` AS cart_product_category,
+     cart.`expire_date` AS cart_expire_date,
+     cart.`mrp` AS cart_mrp,
+     cart.`gst` AS cart_gst,
+     cart.`offer_price` AS cart_offer_price,
+     cart.`image` AS cart_image,
+     cart.`quantity` AS cart_quantity,
+     cart.`total` AS cart_total
+FROM
+     `cart` cart]]>
+	</queryString>
+	<field name="cart_cart_id" class="java.lang.Integer"/>
+	<field name="cart_user_id" class="java.lang.Integer"/>
+	<field name="cart_product_id" class="java.lang.Integer"/>
+	<field name="cart_product_name" class="java.lang.String"/>
+	<field name="cart_manufacturer" class="java.lang.String"/>
+	<field name="cart_manufactured_date" class="java.lang.String"/>
+	<field name="cart_type" class="java.lang.String"/>
+	<field name="cart_product_category" class="java.lang.String"/>
+	<field name="cart_expire_date" class="java.lang.String"/>
+	<field name="cart_mrp" class="java.lang.Long"/>
+	<field name="cart_gst" class="java.lang.Long"/>
+	<field name="cart_offer_price" class="java.lang.Long"/>
+	<field name="cart_image" class="java.lang.String"/>
+	<field name="cart_quantity" class="java.lang.String"/>
+	<field name="cart_total" class="java.lang.String"/>
+	<group name="cart_cart_id">
+		<groupExpression><![CDATA[$F{cart_cart_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="60" splitType="Stretch">
+			<staticText>
+				<reportElement x="353" y="13" width="124" height="33" uuid="39301e31-adde-4f68-bbfb-0b5d51e5a99c"/>
+				<textElement>
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cart Report]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="59" width="802" height="1" uuid="4712a425-137d-4096-9e48-8ec0ace08202"/>
+				<graphicElement>
+					<pen lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="2" y="50" width="800" height="1" uuid="3882df0d-a14a-46d2-b4d1-469b1fe18aba"/>
+			</line>
+			<line>
+				<reportElement x="176" y="18" width="1" height="8" uuid="7dc59c35-1377-4bf5-b158-d7a7659bc567"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="41" height="20" uuid="2aec32a0-cc5f-49b7-8ef8-3395b9c862a0"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cart ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="41" y="0" width="40" height="20" uuid="999e14f4-cee6-402a-b261-454078816cbb"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[User ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="0" width="62" height="20" uuid="01891c90-cde9-41a4-88ff-d9379c193bd9"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Product ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="133" y="0" width="142" height="20" uuid="30d22146-c9d8-420c-9d30-5adf0fefc91a"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Product Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="275" y="0" width="78" height="20" uuid="4f3b2250-0c03-432c-abac-3a60aab37a4b"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pack Size]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="353" y="0" width="68" height="20" uuid="2542f396-c4f3-4082-b751-1928efb8defb"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Expiry Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="421" y="0" width="71" height="20" uuid="bd7f0cfd-8ed7-4248-a8ed-97a436d59713"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[MRP Rs.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="492" y="0" width="68" height="20" uuid="4e3a7611-9fad-417b-a36d-719ddcc31668"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[GST %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="560" y="0" width="76" height="20" uuid="b5effae4-5e64-4e38-85fa-08a750247ba4"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Offer Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="636" y="0" width="81" height="20" uuid="5df13e87-aa8f-4c14-973d-41aae26852d3"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Quantity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="717" y="0" width="85" height="20" uuid="9fe587f9-73a3-41f8-9b6c-0a98899bdb18"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="22" width="802" height="1" uuid="b54d6fe7-341f-4dce-a0c9-57c5b920a8a2"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="41" height="20" uuid="6657370d-6f0d-4e96-9f3a-39229a765ca1"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cart_cart_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="41" y="0" width="40" height="20" uuid="38c28197-df9a-41db-80d1-192a58134215"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cart_user_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="81" y="0" width="62" height="20" uuid="34676c30-4dc3-415f-9325-5f4fee2929d7"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cart_product_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="133" y="0" width="142" height="20" uuid="306231a5-2297-472f-9a63-10142ad1162d"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cart_product_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="275" y="0" width="78" height="20" uuid="8b057997-8780-4dda-b2c5-4113d407985a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cart_type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="353" y="0" width="68" height="20" uuid="a9f856bd-76ed-46c5-b425-dd59ddf731bb"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cart_expire_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="421" y="0" width="71" height="20" uuid="f459d8bd-ae20-400f-a21c-2191e8bcfbe5"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cart_mrp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="492" y="0" width="68" height="20" uuid="2342bb67-64c2-4e6f-aec4-a20be867b0b9"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cart_gst}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="560" y="0" width="76" height="20" uuid="eef17164-0688-4c12-ab70-ff448672705e"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cart_offer_price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="636" y="0" width="81" height="20" uuid="8db188de-27fd-4668-9ee1-eaf9e364700a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cart_quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="717" y="0" width="85" height="20" uuid="727e6b35-d659-4a8a-92b4-984a49414467"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cart_total}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="21" width="802" height="1" uuid="304f0a22-4f1d-4d67-b543-1e9777291f66"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

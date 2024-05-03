@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="user_report" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c9856f2e-4720-4deb-83e2-196ad3636532">
+	<property name="ireport.zoom" value="1.4641000000000008"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     user_signup.`user_id` AS user_signup_user_id,
+     user_signup.`company_name` AS user_signup_company_name,
+     user_signup.`first_name` AS user_signup_first_name,
+     user_signup.`address_line1` AS user_signup_address_line1,
+     user_signup.`city` AS user_signup_city,
+     user_signup.`district` AS user_signup_district,
+     user_signup.`pincode` AS user_signup_pincode,
+     user_signup.`gstno` AS user_signup_gstno,
+     user_signup.`accountno` AS user_signup_accountno,
+     user_signup.`password` AS user_signup_password,
+     user_signup.`email` AS user_signup_email,
+     user_signup.`last_name` AS user_signup_last_name,
+     user_signup.`address_line2` AS user_signup_address_line2,
+     user_signup.`state` AS user_signup_state,
+     user_signup.`taluka` AS user_signup_taluka,
+     user_signup.`contact_no` AS user_signup_contact_no,
+     user_signup.`bank_name` AS user_signup_bank_name,
+     user_signup.`ifsc` AS user_signup_ifsc,
+     user_signup.`cpassword` AS user_signup_cpassword
+FROM
+     `user_signup` user_signup]]>
+	</queryString>
+	<field name="user_signup_user_id" class="java.lang.Integer"/>
+	<field name="user_signup_company_name" class="java.lang.String"/>
+	<field name="user_signup_first_name" class="java.lang.String"/>
+	<field name="user_signup_address_line1" class="java.lang.String"/>
+	<field name="user_signup_city" class="java.lang.String"/>
+	<field name="user_signup_district" class="java.lang.String"/>
+	<field name="user_signup_pincode" class="java.lang.Long"/>
+	<field name="user_signup_gstno" class="java.lang.String"/>
+	<field name="user_signup_accountno" class="java.lang.Long"/>
+	<field name="user_signup_password" class="java.lang.String"/>
+	<field name="user_signup_email" class="java.lang.String"/>
+	<field name="user_signup_last_name" class="java.lang.String"/>
+	<field name="user_signup_address_line2" class="java.lang.String"/>
+	<field name="user_signup_state" class="java.lang.String"/>
+	<field name="user_signup_taluka" class="java.lang.String"/>
+	<field name="user_signup_contact_no" class="java.lang.Long"/>
+	<field name="user_signup_bank_name" class="java.lang.String"/>
+	<field name="user_signup_ifsc" class="java.lang.String"/>
+	<field name="user_signup_cpassword" class="java.lang.String"/>
+	<group name="user_signup_user_id">
+		<groupExpression><![CDATA[$F{user_signup_user_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="76" splitType="Stretch">
+			<staticText>
+				<reportElement x="315" y="16" width="206" height="33" uuid="e67a09e4-923a-4d8b-86d0-ce61f727a677"/>
+				<textElement textAlignment="Center">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[User Report]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="75" width="802" height="1" uuid="d7751381-ec06-4976-bc8e-8c1a24ed37b8"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="42" height="20" uuid="60876b56-d767-4dcc-b04e-baf00056c373"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="601" y="0" width="69" height="20" uuid="cfa31a6e-63bb-4583-b79d-9265d3d8018d"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[City]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="670" y="0" width="61" height="20" uuid="d0b2bb23-c2e0-4859-9695-4e27693d794b"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[District]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="0" width="59" height="20" uuid="90eb5422-0a18-401e-8a7b-b7a5c2cb7689"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Last Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="0" width="87" height="20" uuid="911ea523-9941-4fbe-99c5-cae56c71b912"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contact Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="249" y="0" width="91" height="20" uuid="4c7f4f4f-3c29-44c0-90c2-a1f12d9acdff"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Email Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="427" y="0" width="94" height="20" uuid="f70ae961-26cc-441b-a6d5-6ce7e7abc666"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="18" width="802" height="1" uuid="a248924f-5829-4004-ad50-55780621ea5a"/>
+			</line>
+			<staticText>
+				<reportElement x="42" y="0" width="85" height="20" uuid="f39c2cb7-f02d-44f2-8410-d229e7b47ff0"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lab Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="731" y="0" width="71" height="18" uuid="59501755-6fe5-4a4f-80aa-9cc50d0be739"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Taluka]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="127" y="0" width="63" height="20" uuid="10e609f2-8ba8-4593-ab4e-75a01b640492"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[First Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="521" y="0" width="80" height="20" uuid="9f87b5f0-5d87-4d17-a4ff-4de124c664e2"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[State]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="42" height="20" uuid="ff16a8b9-434d-4137-80cd-1035c019cd9a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{user_signup_user_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="42" y="0" width="85" height="20" uuid="74a20c5c-473a-4dd9-ba2b-066dbc75274a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{user_signup_company_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="127" y="0" width="63" height="20" uuid="ab3b13de-5722-4880-a472-21cc2713f69f"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{user_signup_first_name}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="19" width="802" height="1" uuid="273e7603-a887-413e-9230-3608f49f2e56"/>
+			</line>
+			<textField>
+				<reportElement x="427" y="0" width="94" height="19" uuid="dd157fd9-12bd-4a3b-b884-c0ccc9514fd2"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{user_signup_address_line1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="731" y="0" width="71" height="20" uuid="811f1ba9-3183-4bbd-86b0-95175f9f3cc6"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{user_signup_taluka}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="670" y="0" width="61" height="19" uuid="4eb0c699-ebe2-4bf0-9639-a3d8564319e9"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{user_signup_district}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="0" width="87" height="20" uuid="132ad85c-b7e1-434f-a463-6b39b55bfc5a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{user_signup_contact_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="0" width="59" height="21" uuid="6b448fc0-9e43-48cc-8699-ceb1ce3fd080"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{user_signup_last_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="249" y="0" width="91" height="21" uuid="5b562b76-7b68-4a89-97ce-a8d4334c3842"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{user_signup_email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="521" y="0" width="80" height="19" uuid="48d67156-88c0-4ab4-b03d-f006fc4c7e16"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{user_signup_city}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="601" y="0" width="69" height="19" uuid="f6a7b5e9-d912-4316-b366-5ce493adeb6c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{user_signup_state}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

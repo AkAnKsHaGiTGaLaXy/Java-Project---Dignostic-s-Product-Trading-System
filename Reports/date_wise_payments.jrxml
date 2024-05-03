@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="date_wise_payments" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="67ee0f3b-204d-4d31-a4af-5c60ec2f5491">
+	<property name="ireport.zoom" value="1.6105100000000008"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="Date" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     payment_detail.`payment_id` AS payment_detail_payment_id,
+     payment_detail.`user_id` AS payment_detail_user_id,
+     payment_detail.`card_no` AS payment_detail_card_no,
+     payment_detail.`expiretion_date` AS payment_detail_expiretion_date,
+     payment_detail.`cv_code` AS payment_detail_cv_code,
+     payment_detail.`card_owner` AS payment_detail_card_owner,
+     payment_detail.`order_date` AS payment_detail_order_date,
+     payment_detail.`paymentmode` AS payment_detail_paymentmode
+FROM
+     `payment_detail` payment_detail
+WHERE
+      payment_detail.`order_date` = $P{Date};]]>
+	</queryString>
+	<field name="payment_detail_payment_id" class="java.lang.Integer"/>
+	<field name="payment_detail_user_id" class="java.lang.Integer"/>
+	<field name="payment_detail_card_no" class="java.lang.Long"/>
+	<field name="payment_detail_expiretion_date" class="java.lang.String"/>
+	<field name="payment_detail_cv_code" class="java.lang.Long"/>
+	<field name="payment_detail_card_owner" class="java.lang.String"/>
+	<field name="payment_detail_order_date" class="java.lang.String"/>
+	<field name="payment_detail_paymentmode" class="java.lang.String"/>
+	<group name="payment_detail_payment_id">
+		<groupExpression><![CDATA[$F{payment_detail_payment_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="77" splitType="Stretch">
+			<staticText>
+				<reportElement x="289" y="29" width="259" height="33" uuid="139f2f35-56ad-4d7c-a6af-6e535f01ed20"/>
+				<textElement>
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date Wise Payment Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="34" width="802" height="1" uuid="251b5935-eb59-4a16-a004-8c9c044ce473"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="29" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="73" height="20" uuid="c8b98747-28db-40e1-8035-2a2e5ca51005"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Payment Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="73" y="0" width="82" height="20" uuid="289d83d5-2bca-4bc8-886f-cad7c2ed8682"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[User Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="394" y="0" width="110" height="20" uuid="9e7c01d3-9f1e-4561-8c80-5d07154674ce"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cvv Code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="504" y="0" width="176" height="20" uuid="6d6c7486-6a8d-42cd-b684-27657cab8e1a"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Card Owner Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="680" y="0" width="122" height="20" uuid="93db711a-0317-4c0a-8dfd-57946a85192e"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Order Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="155" y="0" width="99" height="20" uuid="1a74643f-e7aa-4ff1-a457-f9523af796b7"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Payment mode]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="254" y="0" width="140" height="20" uuid="c94f811e-61a5-4d78-a8fd-390177661f49"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Card Number]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="19" width="802" height="1" uuid="25446711-2e00-46db-aba8-2db1b8568855"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="73" height="20" uuid="035bc079-3a23-4104-88be-7c114ed14784"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{payment_detail_payment_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="73" y="0" width="82" height="20" uuid="c5241cac-19f1-49f7-8e2a-f6b205d13988"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{payment_detail_user_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="394" y="0" width="110" height="20" uuid="01465ee2-04b4-4443-b3a9-733882fe29b8"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{payment_detail_cv_code}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="504" y="0" width="176" height="20" uuid="7e7dae25-52e8-496c-82e3-56eec73da7d5"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{payment_detail_card_owner}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="680" y="0" width="122" height="20" uuid="b34c82d3-9736-4bde-ad6d-fbae2cf7b4ee"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{payment_detail_order_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="254" y="0" width="140" height="20" uuid="c38400a4-ea7a-4180-b33f-c05e6e6a50be"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{payment_detail_card_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="155" y="0" width="99" height="20" uuid="2e4810cd-4146-497e-a384-2507839cc85c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{payment_detail_paymentmode}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="20" width="802" height="1" uuid="d1a6a73b-3b74-4260-86ea-d805cac1dca4"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="802" height="1" uuid="dae4bffb-9fe6-4e00-998d-d1b5c05d9c79"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
