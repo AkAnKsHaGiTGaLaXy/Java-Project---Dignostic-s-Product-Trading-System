@@ -1,8 +1,4 @@
-<%-- 
-    Document   : payment
-    Created on : 12 Jan, 2023, 7:42:55 PM
-    Author     : chandrashekhar
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
