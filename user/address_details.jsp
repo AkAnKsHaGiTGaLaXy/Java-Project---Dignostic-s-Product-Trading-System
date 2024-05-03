@@ -1,8 +1,3 @@
-<%-- 
-    Document   : address_details
-    Created on : 7 Jan, 2023, 8:13:05 PM
-    Author     : prath
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
